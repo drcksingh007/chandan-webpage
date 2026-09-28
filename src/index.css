@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3f1ec;
+  --fg: #1a211f;
+  --card: #fbfaf7;
+  --muted: #e7e2d8;
+  --muted-fg: #5c6562;
+  --accent: #1f5c56;
+  --accent-hover: #174742;
+  --accent-fg: #f6f3ee;
+  --border: rgba(26, 33, 31, 0.1);
+  --border-focus: rgba(31, 92, 86, 0.35);
+  --radius: 16px;
+}
+
+html.dark {
+  --bg: #0e1211;
+  --fg: #eceae4;
+  --card: #161c1a;
+  --muted: #1e2623;
+  --muted-fg: #9aa3a0;
+  --accent: #8ec9c2;
+  --accent-hover: #a6dbd4;
+  --accent-fg: #0e1211;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-focus: rgba(142, 201, 194, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: radial-gradient(ellipse 80% 42% at 50% -8%, color-mix(in oklab, var(--accent) 12%, transparent), transparent 70%);
+}
+
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-deva {
+  font-family: 'Noto Sans Devanagari', 'Figtree', sans-serif;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes focusPulse {
+  0%, 6% {
+    box-shadow: 0 0 0 0 transparent;
+    transform: scale(1);
+  }
+  12% {
+    box-shadow: 0 0 0 5px color-mix(in oklab, var(--accent) 45%, transparent);
+    transform: scale(1.015);
+  }
+  22%, 100% {
+    box-shadow: 0 0 0 0 transparent;
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-tab-1 {
+  animation: focusPulse 4.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.animate-pulse-tab-2 {
+  animation: focusPulse 4.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation-delay: 1.6s;
+}
+
+.animate-pulse-tab-3 {
+  animation: focusPulse 4.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation-delay: 3.2s;
+}
+
+.dot-blink {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent-fg);
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-tab-1,
+  .animate-pulse-tab-2,
+  .animate-pulse-tab-3,
+  .dot-blink {
+    animation: none !important;
+  }
+}

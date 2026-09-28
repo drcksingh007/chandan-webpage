@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Chandan Singh — Practicing Gastroenterology, Nepalgunj",
+  "description": "Dr. Chandan Kumar Singh, MD Medicine, Practicing Gastroenterology at Sanjeevani College of Medical Sciences, Nepalgunj. Book OPD appointments, video consultations, and get report advice.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

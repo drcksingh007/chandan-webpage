@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drcksingh007.github.io/drcksingh007-gmail.com-s-Org/sitemap.xml
